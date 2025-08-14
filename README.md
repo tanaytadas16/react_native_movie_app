@@ -2,6 +2,12 @@
 
 A simple movie browsing app built with React Native—explore, search, and view details of films using [TMDb](https://www.themoviedb.org/) (The Movie Database) API.
 
+<img width="1179" height="2556" alt="Simulator Screenshot - iPhone 15 Pro - 2025-08-14 at 09 22 45" src="https://github.com/user-attachments/assets/9d9d14f8-ec36-4121-a450-24d5ad47c1f5" />
+
+<img width="1179" height="2556" alt="Simulator Screenshot - iPhone 15 Pro - 2025-08-14 at 09 22 55" src="https://github.com/user-attachments/assets/723eb61c-c10f-40b8-be13-92473583cd62" />
+
+
+
 ---
 
 ##  Features
