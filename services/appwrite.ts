@@ -47,11 +47,35 @@ export const getTrendingMovies = async (): Promise<
 > => {
   try {
     const result = await database.listDocuments(DATABASE_ID, COLLECTION_ID, [
-      Query.limit(5),
+      Query.limit(20), // Fetch more to account for potential duplicates
       Query.orderDesc("count"),
     ]);
 
-    return result.documents as unknown as TrendingMovie[];
+    // Create a Map to track unique movies by movie_id
+    const uniqueMoviesMap = new Map();
+
+    result.documents.forEach((doc: any) => {
+      const movieId = doc.movie_id;
+      if (!uniqueMoviesMap.has(movieId)) {
+        uniqueMoviesMap.set(movieId, {
+          movie_id: doc.movie_id,
+          title: doc.title,
+          poster_url: doc.poster_url,
+          count: doc.count,
+        });
+      } else {
+        // If movie already exists, add the counts together
+        const existing = uniqueMoviesMap.get(movieId);
+        existing.count += doc.count;
+      }
+    });
+
+    // Convert Map to array and sort by total count
+    const uniqueMovies = Array.from(uniqueMoviesMap.values())
+      .sort((a, b) => b.count - a.count)
+      .slice(0, 5); // Return top 5 unique movies
+
+    return uniqueMovies as unknown as TrendingMovie[];
   } catch (error) {
     console.log(error);
   }
