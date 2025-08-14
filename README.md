@@ -1,50 +1,89 @@
-# Welcome to your Expo app 👋
+# React Native Movie App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A simple movie browsing app built with React Native—explore, search, and view details of films using [TMDb](https://www.themoviedb.org/) (The Movie Database) API.
 
-## Get started
+---
 
-1. Install dependencies
+##  Features
 
+- Browse trending, popular, and upcoming movies
+- Search for movies by title
+- View movie details including poster, synopsis, release date, rating, and more
+- Add favorites (optional: stored locally)
+- Clean, mobile-first UI (customize styling/UI as desired)
+
+---
+
+##  Tech Stack
+
+- **React Native** — cross-platform mobile framework
+- **Expo** (optional) — for simplified development and deployment
+- **API** — The Movie Database (TMDb)
+- **State Management** — React hooks, Context API, Redux, or Zustand (fill in what you’re using)
+- **Networking** — `fetch` API or `axios`
+- **Styling** — JavaScript styles, NativeWind, or styled components (adjust to your stack)
+
+---
+
+##  Getting Started
+
+### Prerequisites
+
+Make sure you have:
+
+- [Node.js](https://nodejs.org/) (v16 or newer)
+- Expo CLI (if applicable): `npm install -g expo-cli`
+- A TMDb API key (sign up at [TMDb API](https://www.themoviedb.org/settings/api))
+
+### Setup & Run
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/tanaytadas16/react_native_movie_app.git
+   cd react_native_movie_app
+   ```
+2. Install the dependecies
    ```bash
    npm install
    ```
-
-2. Start the app
-
+3. Create a .env file in the root:
    ```bash
-   npx expo start
+   EXPO_PUBLIC_MOVIE_API_KEY=
+   EXPO_PUBLIC_APPWRITE_PROJECT_ID=
+   EXPO_PUBLIC_APPWRITE_ENDPOINT=
+   EXPO_PUBLIC_APPWRITE_DATABASE_ID=
+   EXPO_PUBLIC_APPWRITE_COLLECTION_ID=
    ```
+4. Start the development server:
+   ```bash
+   npm run ios
+   ```
+5. Open your app:
 
-In the output, you'll find options to open the app in a
+Scan the QR code with the Expo Go app, or
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Use the iOS or Android emulator/simulator
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+Customization Ideas
+Favorites — store user favorites using AsyncStorage or secure storage
 
-When you're ready, run:
+Filters — allow filtering by genre, release year, rating
 
-```bash
-npm run reset-project
-```
+Paging + Infinite Scroll — implement seamless scrolling through large lists
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Offline support — cache recent results to show when offline
 
-## Learn more
+Animations/UI polish — use Lottie, shared element transitions, or gesture handling
 
-To learn more about developing your project with Expo, look at the following resources:
+---
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+License
+This project is open-source and available under the MIT License. Feel free to use and modify as needed.
 
-## Join the community
+Acknowledgments
+Based on TMDb API
 
-Join our community of developers creating universal apps.
+Inspired by similar React Native movie apps and tutorials
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
