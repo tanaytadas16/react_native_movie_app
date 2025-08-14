@@ -66,7 +66,7 @@ Use the iOS or Android emulator/simulator
 
 ---
 
-Customization Ideas
+## Customization Ideas
 Favorites — store user favorites using AsyncStorage or secure storage
 
 Filters — allow filtering by genre, release year, rating
@@ -79,10 +79,10 @@ Animations/UI polish — use Lottie, shared element transitions, or gesture hand
 
 ---
 
-License
+## License
 This project is open-source and available under the MIT License. Feel free to use and modify as needed.
 
-Acknowledgments
+## Acknowledgments
 Based on TMDb API
 
 Inspired by similar React Native movie apps and tutorials
